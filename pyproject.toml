@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "blurr"
+version = "0.1.0"
+description = "Encrypt text and files into portable alphanumeric text."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["cryptography>=46"]
+
+[project.scripts]
+blurr = "blurr.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
